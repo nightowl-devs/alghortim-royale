@@ -1,3 +1,2 @@
-rootProject.name = "alghortim-royale"
-include(":networking", ":shared")
+rootProject.name = "algorithm-royale"
 
