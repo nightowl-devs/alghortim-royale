@@ -1,4 +1,9 @@
-package dev.nightowl.alghoritmroyale.shared.util;
+package dev.nightowl.alghoritmroyale.shared.module;
 
-public class Module {
+public abstract class Module {
+    public abstract void init();
+    public abstract void shutdown();
+
+    public abstract String getName();
+
 }
