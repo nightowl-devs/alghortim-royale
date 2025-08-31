@@ -1,0 +1,33 @@
+# This is the top-most EditorConfig file
+root = true
+
+# General settings for all files
+[*]
+end_of_line = crlf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Settings for Java and Kotlin files
+[*.{java,kt}]
+indent_style = space
+indent_size = 4
+
+# For Kotlin, it's also common to specify a max line length
+# and settings for import ordering, which IDEs like IntelliJ can use.
+[*.kt]
+max_line_length = 120
+# IntelliJ-specific properties for Kotlin
+ij_kotlin_imports_layout = *, java, javax, kotlin, static *
+ij_kotlin_allow_trailing_comma = true
+
+# For Java, you might want a different max line length or import order.
+[*.java]
+max_line_length = 120
+# IntelliJ-specific properties for Java
+ij_java_imports_layout = *, java, javax, static *
+
+# Settings for other common project files to maintain consistency
+[*.{xml,yml,json,md}]
+indent_style = space
+indent_size = 4
