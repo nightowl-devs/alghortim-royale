@@ -1,6 +1,8 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="dev.nightowl.Main" />
+    <option name="ALTERNATIVE_JRE_PATH" value="openjdk-23" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="MAIN_CLASS_NAME" value="dev.nightowl.alghortimroyale.Main" />
     <module name="algorithm-royale.main" />
     <extension name="coverage">
       <pattern>

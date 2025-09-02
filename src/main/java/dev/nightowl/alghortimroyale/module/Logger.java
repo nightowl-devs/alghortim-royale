@@ -1,7 +1,7 @@
-package dev.nightowl.module;
+package dev.nightowl.alghortimroyale.module;
 
-import dev.nightowl.module.enums.Color;
-import dev.nightowl.module.enums.LogLevel;
+import dev.nightowl.alghortimroyale.module.enums.Color;
+import dev.nightowl.alghortimroyale.module.enums.LogLevel;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

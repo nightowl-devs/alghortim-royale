@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="23" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="networking" target="17" />
+      <module name="networking.main" target="17" />
+      <module name="networking.shared" target="17" />
+      <module name="networking.shared.main" target="17" />
+      <module name="networking.shared.test" target="17" />
+      <module name="networking.test" target="17" />
+      <module name="shared" target="17" />
+      <module name="shared.main" target="17" />
+      <module name="shared.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

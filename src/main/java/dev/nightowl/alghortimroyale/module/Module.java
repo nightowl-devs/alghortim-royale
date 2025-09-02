@@ -1,4 +1,4 @@
-package dev.nightowl.module;
+package dev.nightowl.alghortimroyale.module;
 
 public abstract class Module {
   public abstract void init();

@@ -1,4 +1,4 @@
-package dev.nightowl.module.enums;
+package dev.nightowl.alghortimroyale.module.enums;
 
 public enum Color {
   RESET("\u001B[0m"),

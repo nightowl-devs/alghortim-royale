@@ -1,6 +1,6 @@
-package dev.nightowl;
+package dev.nightowl.alghortimroyale;
 
-import dev.nightowl.core.App;
+import dev.nightowl.alghortimroyale.core.App;
 
 public class Main {
   public static void main(String[] args) {
