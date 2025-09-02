@@ -15,12 +15,13 @@ public class ProxyModule  extends Module {
 
     @Override
     public void shutdown() {
-        proxyServer.start();
+        proxyServer.stop();
+
 
     }
 
     @Override
     public String getName() {
-        return "";
+        return "Proxy Server";
     }
 }

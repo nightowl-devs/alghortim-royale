@@ -1,19 +1,21 @@
 package dev.nightowl.alghortimroyale.proxy;
 
+import dev.nightowl.alghortimroyale.core.App;
 import dev.nightowl.alghortimroyale.module.Logger;
 import dev.nightowl.alghortimroyale.module.enums.LogLevel;
 
 import java.io.*;
 import java.net.*;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class ProxyServer {
     private final String REMOTE_HOST = "game.clashroyaleapp.com";
     private final Integer REMOTE_PORT = 9339;
     private ServerSocket serverSocket;
 
+
+
     public void start() {
-        Logger.log(LogLevel.INFO, "Starting clash royale proxy server on port " + REMOTE_PORT);
+        Logger.log(LogLevel.INFO, "Starting proxy server on port " + REMOTE_PORT);
         try {
             serverSocket = new ServerSocket(REMOTE_PORT);
             while (!serverSocket.isClosed()) {
@@ -23,6 +25,7 @@ public class ProxyServer {
         } catch (IOException e) {
             if (!serverSocket.isClosed()) {
                 Logger.log(LogLevel.ERROR, "Error starting proxy server: " + e.getMessage());
+                App.getInstance().shutdown(false);
             } else {
                 Logger.log(LogLevel.INFO, "Proxy server stopped.");
             }
