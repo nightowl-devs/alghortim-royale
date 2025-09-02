@@ -1,10 +1,12 @@
 package dev.nightowl.alghortimroyale.dns;
 
+import dev.nightowl.alghortimroyale.core.App;
 import dev.nightowl.alghortimroyale.module.Logger;
 import dev.nightowl.alghortimroyale.module.Module;
 import dev.nightowl.alghortimroyale.module.enums.LogLevel;
 import dev.nightowl.alghortimroyale.core.util.NetworkUtil;
 import org.xbill.DNS.*;
+import org.xbill.DNS.Record;
 
 import java.io.IOException;
 import java.net.*;
@@ -41,10 +43,12 @@ public class DNSModule extends Module {
             executor.submit(this::listenForQueries);
 
         } catch (Exception e) {
-            Logger.log(LogLevel.ERROR, "Failed to start DNS server: " + e.getMessage());
+            Logger.log(LogLevel.ERROR, "Failed to start DNS server: \n" + e.getMessage());
             Logger.log(LogLevel.ERROR, "Attempted to bind to " + LISTEN_ADDRESS + ":" + DNS_PORT);
             Logger.log(LogLevel.ERROR, "Make sure to run the program as administrator/root to bind to port 53");
             stop();
+            App.getInstance().shutdown(false);
+
         }
     }
 
@@ -56,7 +60,7 @@ public class DNSModule extends Module {
         if (executor != null) {
             executor.shutdown();
         }
-        Logger.log(LogLevel.INFO, "DNS Server closed");
+        Logger.log(LogLevel.WARN, "DNS Server closed");
     }
 
     private void listenForQueries() {
