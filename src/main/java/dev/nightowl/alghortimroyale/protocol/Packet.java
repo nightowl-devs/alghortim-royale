@@ -1,4 +1,4 @@
-package dev.nightowl.alghortimroyale.dns;
+package dev.nightowl.alghortimroyale.protocol;
 
 import java.nio.Buffer;
 

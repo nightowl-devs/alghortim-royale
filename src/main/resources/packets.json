@@ -1,0 +1,19 @@
+[
+
+    {
+        "id": 10100,
+        "name": "ClientHello"
+    },
+
+    {
+
+        "id": 20100,
+        "name": "ServerHello"
+    },
+
+    {
+
+        "id": 10101,
+        "name": "Login"
+    }
+]
